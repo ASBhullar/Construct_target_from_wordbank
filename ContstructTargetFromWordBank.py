@@ -1,4 +1,3 @@
-import os
 import time
 
 
@@ -10,10 +9,10 @@ def construct_target(target_file, word_bank_file):
     begin_time = time.time()
 
     # Read the target word from the target file
-    target = open(os.path.dirname(os.getcwd()) + target_file).read()
+    target = open(target_file).read()
 
     # Read all the words from word bank file and store them by splitting the contents of file using space as delimiter
-    word_bank = open(os.path.dirname(os.getcwd()) + word_bank_file).read().split()
+    word_bank = open(word_bank_file).read().split()
 
     # Using tabulation to solve this DP problem.
     # The size of this list will be equal to all possible suffixes of the target i.e. the length of the target
@@ -75,36 +74,28 @@ def print_results(results: list, begin_time: float):
 
 def main():
     print('Same question as given in the assignment')
-    construct_target("/Construct_target_from_wordbank/test_files/testcase1_target.txt",
-                     "/Construct_target_from_wordbank/test_files/testcase1_word_bank.txt")
+    exec(open('testcase1.py').read())
 
     print('\nEdge case where word bank contains capital letters')
-    construct_target("/Construct_target_from_wordbank/test_files/testcase2_target.txt",
-                     "/Construct_target_from_wordbank/test_files/testcase2_word_bank.txt")
+    exec(open('testcase2.py').read())
 
     print('\nEdge case where word bank is empty')
-    construct_target("/Construct_target_from_wordbank/test_files/testcase3_target.txt",
-                     "/Construct_target_from_wordbank/test_files/testcase3_word_bank.txt")
+    exec(open('testcase3.py').read())
 
     print('\nEdge case where both word bank and target are empty')
-    construct_target("/Construct_target_from_wordbank/test_files/testcase4_target.txt",
-                     "/Construct_target_from_wordbank/test_files/testcase4_word_bank.txt")
+    exec(open('testcase4.py').read())
 
     print('\nEdge case where word bank and target contain special characters')
-    construct_target("/Construct_target_from_wordbank/test_files/testcase5_target.txt",
-                     "/Construct_target_from_wordbank/test_files/testcase5_word_bank.txt")
+    exec(open('testcase5.py').read())
 
     print('\n')
-    construct_target("/Construct_target_from_wordbank/test_files/testcase6_target.txt",
-                     "/Construct_target_from_wordbank/test_files/testcase6_word_bank.txt")
+    exec(open('testcase6.py').read())
 
     print('\n')
-    construct_target("/Construct_target_from_wordbank/test_files/testcase7_target.txt",
-                     "/Construct_target_from_wordbank/test_files/testcase7_word_bank.txt")
+    exec(open('testcase7.py').read())
 
     print('\n')
-    construct_target("/Construct_target_from_wordbank/test_files/testcase8_target.txt",
-                     "/Construct_target_from_wordbank/test_files/testcase8_word_bank.txt")
+    exec(open('testcase8.py').read())
 
 
 if __name__ == "__main__":

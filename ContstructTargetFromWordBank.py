@@ -4,7 +4,6 @@ import time
 
 # This python file contains the code to find all unique ways to construct target from given word-bank.
 # Each test case file is a python file which will call construct_target.
-# Hence, no main function is required in this file.
 
 def construct_target(target_file, word_bank_file):
     # Store the start time of the program
@@ -48,7 +47,7 @@ def construct_target(target_file, word_bank_file):
         results = construct_unique_lists(combinations[len(target) - 1])
     else:
         results = []
-    # Print results in the format given in the assignment and pass the begin time to calculate the total execution time.
+    # Print results in the format given in the assignment and pass the start time to calculate the total execution time.
     print_results(results, begin_time)
 
 
@@ -72,3 +71,41 @@ def print_results(results: list, begin_time: float):
         print("\t" + str(result))
     print(']')
     print("Runtime: " + str((end_time - begin_time)) + " seconds")
+
+
+def main():
+    print('Same question as given in the assignment')
+    construct_target("/Construct_target_from_wordbank/test_files/testcase1_target.txt",
+                     "/Construct_target_from_wordbank/test_files/testcase1_word_bank.txt")
+
+    print('\nEdge case where word bank contains capital letters')
+    construct_target("/Construct_target_from_wordbank/test_files/testcase2_target.txt",
+                     "/Construct_target_from_wordbank/test_files/testcase2_word_bank.txt")
+
+    print('\nEdge case where word bank is empty')
+    construct_target("/Construct_target_from_wordbank/test_files/testcase3_target.txt",
+                     "/Construct_target_from_wordbank/test_files/testcase3_word_bank.txt")
+
+    print('\nEdge case where both word bank and target are empty')
+    construct_target("/Construct_target_from_wordbank/test_files/testcase4_target.txt",
+                     "/Construct_target_from_wordbank/test_files/testcase4_word_bank.txt")
+
+    print('\nEdge case where word bank and target contain special characters')
+    construct_target("/Construct_target_from_wordbank/test_files/testcase5_target.txt",
+                     "/Construct_target_from_wordbank/test_files/testcase5_word_bank.txt")
+
+    print('\n')
+    construct_target("/Construct_target_from_wordbank/test_files/testcase6_target.txt",
+                     "/Construct_target_from_wordbank/test_files/testcase6_word_bank.txt")
+
+    print('\n')
+    construct_target("/Construct_target_from_wordbank/test_files/testcase7_target.txt",
+                     "/Construct_target_from_wordbank/test_files/testcase7_word_bank.txt")
+
+    print('\n')
+    construct_target("/Construct_target_from_wordbank/test_files/testcase8_target.txt",
+                     "/Construct_target_from_wordbank/test_files/testcase8_word_bank.txt")
+
+
+if __name__ == "__main__":
+    main()

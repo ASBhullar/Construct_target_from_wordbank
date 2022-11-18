@@ -1,0 +1,61 @@
+Testcase 1:
+Number of ways: 2
+[
+	['purp', 'le']
+	['p', 'ur', 'p', 'le']
+]
+Runtime: 0.0002701282501220703 seconds
+
+
+Testcase 2:
+Number of ways: 0
+[
+]
+Runtime: 0.0003330707550048828 seconds
+
+
+Testcase 3:
+Number of ways: 0
+[
+]
+Runtime: 0.00021886825561523438 seconds
+
+
+Testcase 4:
+Number of ways: 0
+[
+]
+Runtime: 0.0001201629638671875 seconds
+
+
+Testcase 5:
+Number of ways: 0
+[
+]
+Runtime: 0.00031638145446777344 seconds
+
+
+Testcase 6:
+Number of ways: 1
+[
+	['Santa', 'clara', 'university']
+]
+Runtime: 0.0004429817199707031 seconds
+
+
+Testcase 7:
+Number of ways: 1
+[
+	['Comp', 'uter', 's', 'Ro', 'ck']
+]
+Runtime: 0.00043702125549316406 seconds
+
+
+Testcase 8:
+Number of ways: 3
+[
+	['a', 'a', 'bcd']
+	['a', 'a', 'b', 'c', 'd']
+	['a', 'a', 'bc', 'd']
+]
+Runtime: 0.0004892349243164062 seconds
